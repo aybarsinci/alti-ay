@@ -1,0 +1,672 @@
+/* ============================================================
+   Altı Ay — paylaşılan iskelet
+   SADECE yerleşim/boşluk/yapı. Renk ve tipografi themes/*.css içinde.
+   Her tema şu değişkenleri tanımlar: --ink --ink-soft --acc --line --surf
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #f7f7f4;
+  color: #1c2230;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+}
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 10px 14px;
+  z-index: 50;
+}
+.skip:focus {
+  left: 8px;
+  top: 8px;
+}
+:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: 2px;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 34px 26px 80px;
+  position: relative;
+}
+
+/* ---------- Başlık ---------- */
+.j-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 0 4px;
+}
+.j-eyebrow {
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+.j-title {
+  margin: 0;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+.j-sub {
+  margin: 12px 0 26px;
+  line-height: 1.55;
+  max-width: 62ch;
+}
+.j-live {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.j-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--acc);
+}
+
+/* ---------- Bölüm başlığı ---------- */
+.sec {
+  margin: 0 0 10px;
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+}
+.j-grid + .sec,
+.j-status + .sec,
+.j-cycles + .sec {
+  margin-top: 26px;
+}
+
+/* ---------- Özet şeridi ---------- */
+.j-status {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 0 0 26px;
+}
+.j-stat {
+  padding: 12px 14px;
+  min-width: 0;
+}
+.j-stat-l {
+  margin: 0 0 6px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.j-stat-v {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.j-stat-v small {
+  font-size: 12px;
+  font-weight: 400;
+}
+.kpi-sm {
+  font-size: 14px;
+}
+
+/* ---------- İki sütun: grafik + yan panel ---------- */
+.j-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 12px;
+  margin: 0 0 26px;
+}
+.j-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.panel {
+  padding: 14px 16px 16px;
+  min-width: 0;
+}
+
+/* ---------- Grafik ---------- */
+.prog-line {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.ch-wrap {
+  width: 100%;
+}
+.ch-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ch-grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.ch-area {
+  fill: var(--acc);
+  opacity: 0.07;
+  stroke: none;
+}
+.ch-enerji {
+  fill: none;
+  stroke: var(--acc);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.ch-kilo {
+  fill: none;
+  stroke: var(--ink-soft);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+}
+.ch-dot {
+  fill: var(--acc);
+}
+.ch-yl,
+.ch-xl {
+  fill: var(--ink-soft);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.ch-empty {
+  margin: 20px 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.ch-legend {
+  display: flex;
+  gap: 16px;
+  margin: 8px 0 0;
+  font-size: 11px;
+}
+.ch-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ch-sw {
+  width: 14px;
+  height: 3px;
+  display: inline-block;
+}
+.ch-sw-e {
+  background: var(--acc);
+}
+.ch-sw-k {
+  background: var(--ink-soft);
+}
+
+/* ---------- Checklist ---------- */
+.ck-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ck {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+}
+.ck-box {
+  width: 17px;
+  height: 17px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  font-size: 11px;
+  flex: none;
+}
+.ck.is-on .ck-box {
+  border-color: var(--acc);
+  color: var(--acc);
+}
+.ck.is-off {
+  opacity: 0.5;
+}
+.ck-day {
+  margin: 10px 0 0;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- Kitaplar & kurslar ---------- */
+.lb-h {
+  margin: 0 0 7px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.lb-list + .lb-h {
+  margin-top: 14px;
+}
+.lb-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lb {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12.5px;
+}
+.lb-box {
+  flex: none;
+  width: 12px;
+}
+.lb.is-done .lb-box {
+  color: var(--acc);
+}
+.lb-t {
+  flex: 1;
+  min-width: 0;
+}
+.lb-s {
+  opacity: 0.65;
+}
+.lb-n {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+}
+
+/* ---------- Kür takvimi ---------- */
+.j-cycles {
+  display: flex;
+  gap: 6px;
+  margin: 0 0 26px;
+}
+.j-cyc {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 6px 8px;
+  text-align: center;
+}
+.j-cyc-n {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.j-cyc-d {
+  margin: 3px 0 0;
+  font-size: 10px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Günlük ---------- */
+.j-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.j-entry {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-areas:
+    "meta meta"
+    "head head"
+    "media body";
+  gap: 0 20px;
+  padding: 18px 20px 20px;
+}
+.j-meta {
+  grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 8px;
+}
+.j-day {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.j-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+}
+.j-en {
+  font-size: 11.5px;
+}
+.j-date {
+  font-size: 12px;
+  margin-left: auto;
+}
+.j-h {
+  grid-area: head;
+  margin: 0 0 14px;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.j-h a {
+  color: inherit;
+  text-decoration: none;
+}
+.j-h a:hover {
+  text-decoration: underline;
+}
+
+/* medya: video + fotoğraf */
+.j-media {
+  grid-area: media;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.j-mv,
+.j-mf {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+.j-mv {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+.j-mf {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.j-mv.is-ph,
+.j-mf.is-ph {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: var(--line);
+  opacity: 0.55;
+}
+.j-play {
+  width: 0;
+  height: 0;
+  border-left: 15px solid var(--ink-soft);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.j-dur,
+.j-ph-l {
+  position: absolute;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.j-dur {
+  right: 6px;
+  bottom: 5px;
+}
+.j-ph-l {
+  left: 6px;
+  bottom: 5px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.j-body {
+  grid-area: body;
+  min-width: 0;
+}
+.j-body > *:first-child {
+  margin-top: 0;
+}
+.j-body > *:last-child {
+  margin-bottom: 0;
+}
+.j-body p {
+  margin: 0 0 13px;
+  max-width: 62ch;
+}
+.j-body h3 {
+  margin: 20px 0 9px;
+  line-height: 1.25;
+}
+.j-body ul,
+.j-body ol {
+  margin: 0 0 13px;
+  padding-left: 20px;
+  max-width: 62ch;
+}
+.j-body li {
+  margin: 0 0 4px;
+}
+.j-body blockquote {
+  margin: 16px 0;
+  padding: 11px 14px;
+  font-size: 0.95em;
+}
+.j-body blockquote p {
+  margin: 0;
+}
+.j-body figure {
+  margin: 18px 0;
+}
+.j-body figcaption {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+.j-body code {
+  font-size: 0.92em;
+  padding: 1px 5px;
+}
+
+/* ---------- Arşiv / gezinme ---------- */
+.j-archive {
+  margin: 26px 0 0;
+}
+.j-arch-h {
+  margin: 0 0 12px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.j-arch-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.j-arch-item a {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 0;
+  text-decoration: none;
+  color: inherit;
+}
+.j-arch-item a:hover .j-arch-t {
+  text-decoration: underline;
+}
+.j-arch-d {
+  font-size: 12px;
+  flex: none;
+  min-width: 92px;
+  font-variant-numeric: tabular-nums;
+}
+.j-arch-t {
+  font-weight: 600;
+}
+
+.j-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 18px 0 0;
+  font-size: 13px;
+}
+.j-nav-a {
+  text-decoration: none;
+  max-width: 46%;
+}
+.j-nav-r {
+  text-align: right;
+}
+.j-nav-a:hover {
+  text-decoration: underline;
+}
+.j-back {
+  display: inline-block;
+  margin: 0 0 18px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.j-back:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Alt ---------- */
+.j-prompt {
+  margin: 34px 0 0;
+  font-size: 13px;
+}
+.blk {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  margin-left: 4px;
+  vertical-align: -2px;
+  background: var(--acc);
+  animation: blk 1.1s step-end infinite;
+}
+@keyframes blk {
+  50% {
+    opacity: 0;
+  }
+}
+.j-foot {
+  margin: 14px 0 0;
+  padding: 16px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.j-foot p {
+  margin: 0 0 5px;
+}
+.j-loading,
+.j-empty,
+.j-error {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 15px;
+}
+
+/* ---------- Tema seçici ---------- */
+.themebar {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.themebar-l {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.themebar-pills {
+  display: flex;
+  gap: 4px;
+}
+.themebar-pill {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+}
+
+/* ---------- Dar ekran ---------- */
+@media (max-width: 900px) {
+  .j-grid {
+    grid-template-columns: 1fr;
+  }
+  .j-status {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    padding: 24px 15px 90px;
+  }
+  .j-head {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .j-status {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .j-entry {
+    grid-template-columns: 1fr;
+    grid-template-areas: "meta" "head" "media" "body";
+    gap: 0;
+  }
+  .j-media {
+    flex-direction: row;
+    margin: 0 0 14px;
+  }
+  .j-cyc-d {
+    display: none;
+  }
+  .j-date {
+    margin-left: 0;
+  }
+  .j-arch-item a {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .themebar {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    justify-content: center;
+  }
+  .themebar-pills {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

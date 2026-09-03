@@ -1,0 +1,257 @@
+/* ============================================================
+   TERMINAL — Matrix Pro (yeşil fosfor terminal)
+   Aybars'ın bingx panosuyla aynı deri: #000600 zemin, #2bff88 vurgu,
+   IBM Plex Mono, [ KÖŞELİ ] başlıklar, tarama çizgileri, yanıp sönen imleç.
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #000600;
+  --ink: #8dffab;
+  --ink-body: #8dffab;
+  --ink-soft: #4f8a63;
+  --sym: #c6ffd6;
+  --surf: #02100a;
+  --surf-2: #041b10;
+  --line: #164a2b;
+  --acc: #2bff88;
+  --warn: #eaff6b;
+  --neg: #ff5f56;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* tarama çizgileri */
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(43, 255, 136, 0.045) 0 1px,
+    transparent 1px 4px
+  );
+}
+
+.skip {
+  background: var(--acc);
+  color: var(--bg);
+}
+
+.j-eyebrow {
+  color: var(--ink-soft);
+}
+.j-title {
+  color: var(--acc);
+  font-weight: 700;
+  font-size: clamp(26px, 4.6vw, 38px);
+  letter-spacing: -0.01em;
+}
+.j-sub {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+}
+
+.j-live {
+  border: 1px solid rgba(43, 255, 136, 0.32);
+  background: rgba(43, 255, 136, 0.08);
+  color: var(--ink);
+  text-transform: uppercase;
+  box-shadow: 0 0 22px rgba(43, 255, 136, 0.16);
+}
+.j-live-dot {
+  box-shadow: 0 0 10px var(--acc);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.6);
+  }
+}
+
+.sec {
+  color: var(--acc);
+}
+
+.j-stat,
+.panel,
+.j-entry {
+  background: var(--surf);
+  border: 1px solid var(--line);
+}
+.j-stat-l {
+  color: var(--ink-soft);
+}
+.j-stat-v {
+  color: var(--sym);
+  font-weight: 600;
+}
+.j-stat-v small {
+  color: var(--ink-soft);
+}
+
+.prog-line {
+  color: var(--sym);
+  font-weight: 600;
+}
+.ch-legend {
+  color: var(--ink-soft);
+}
+
+.ck-box {
+  background: var(--bg);
+}
+.ck.is-on {
+  color: var(--sym);
+}
+.ck-day {
+  color: var(--ink-soft);
+}
+
+.lb-h {
+  color: var(--ink-soft);
+}
+.lb.is-done .lb-t {
+  color: var(--sym);
+}
+.lb-n {
+  color: var(--ink-soft);
+}
+
+.j-cyc {
+  background: var(--surf);
+  border: 1px solid var(--line);
+  border-bottom-width: 3px;
+}
+.j-cyc.is-done {
+  border-bottom-color: var(--ink-soft);
+}
+.j-cyc.is-now {
+  border-bottom-color: var(--acc);
+  background: var(--surf-2);
+}
+.j-cyc-n {
+  color: var(--ink-soft);
+}
+.j-cyc.is-done .j-cyc-n {
+  color: var(--ink);
+}
+.j-cyc.is-now .j-cyc-n {
+  color: var(--acc);
+}
+.j-cyc-d {
+  color: var(--ink-soft);
+}
+
+.j-day {
+  color: var(--acc);
+}
+.j-badge {
+  background: rgba(43, 255, 136, 0.12);
+  color: var(--acc);
+}
+.j-en {
+  color: var(--warn);
+}
+.j-date,
+.j-date a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.j-h {
+  color: var(--sym);
+  font-weight: 600;
+  font-size: clamp(17px, 2.4vw, 21px);
+}
+.j-body {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.75;
+}
+.j-body h3 {
+  color: var(--sym);
+  font-size: 15px;
+}
+.j-body a {
+  color: var(--acc);
+}
+.j-body strong {
+  color: var(--sym);
+}
+.j-body blockquote {
+  border-left: 3px solid var(--warn);
+  background: var(--surf-2);
+  color: var(--ink-soft);
+}
+.j-body code {
+  background: var(--surf-2);
+  color: var(--warn);
+}
+.j-body figcaption {
+  color: var(--ink-soft);
+}
+
+.j-mv.is-ph,
+.j-mf.is-ph {
+  background: var(--surf-2);
+  opacity: 1;
+}
+.j-play {
+  border-left-color: var(--acc);
+}
+.j-dur,
+.j-ph-l {
+  color: var(--ink-soft);
+}
+
+.j-arch-h {
+  color: var(--ink-soft);
+}
+.j-arch-item {
+  border-bottom: 1px solid var(--line);
+}
+.j-arch-d {
+  color: var(--ink-soft);
+}
+.j-arch-t {
+  color: var(--ink);
+}
+.j-nav-a,
+.j-back {
+  color: var(--acc);
+}
+
+.j-prompt {
+  color: var(--acc);
+}
+.j-foot {
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.themebar {
+  background: rgba(2, 16, 10, 0.94);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+.themebar-pill:hover {
+  border-color: var(--acc);
+}
+.themebar-pill[aria-pressed="true"] {
+  background: var(--acc);
+  color: var(--bg);
+}

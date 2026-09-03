@@ -1,0 +1,221 @@
+/* ============================================================
+   MEKTUP — daktilo harfi, geniş kenar boşluğu, tek kırmızı vurgu
+   Geride bırakılan bir mektup hissi. Tümü tek yazı tipi.
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+  --paper: #f4f4f2;
+  --ink: #16181c;
+  --ink-soft: #6c7078;
+  --acc: #a33226;
+  --line: #d5d6d2;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Mono", ui-monospace, "Courier New", monospace;
+}
+
+.skip {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.page {
+  max-width: 680px;
+  padding-top: 64px;
+}
+
+.j-eyebrow {
+  color: var(--acc);
+  letter-spacing: 0.2em;
+}
+.j-title {
+  font-weight: 600;
+  font-size: clamp(30px, 5.4vw, 42px);
+  letter-spacing: -0.02em;
+}
+.j-sub {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* Durum bilgisi: mektup başlığı gibi, kutu yok */
+.j-status {
+  display: block;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  margin-bottom: 26px;
+}
+.j-stat {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 3px 0;
+}
+.j-stat-l {
+  margin: 0;
+  min-width: 130px;
+  color: var(--ink-soft);
+  letter-spacing: 0.14em;
+}
+.j-stat-v {
+  font-size: 14px;
+  font-weight: 600;
+}
+.j-stat-v small {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+/* Kürler: tek satır, kutu yok */
+.j-cycles {
+  gap: 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+.j-cyc {
+  padding: 4px 2px;
+  text-align: left;
+}
+.j-cyc-n {
+  font-weight: 400;
+  color: var(--ink-soft);
+  font-size: 11.5px;
+}
+.j-cyc.is-done .j-cyc-n {
+  color: var(--ink);
+  text-decoration: line-through;
+  text-decoration-color: var(--ink-soft);
+}
+.j-cyc.is-now .j-cyc-n {
+  color: var(--acc);
+  font-weight: 600;
+}
+.j-cyc-d {
+  color: var(--ink-soft);
+  font-size: 10px;
+}
+
+.j-secline {
+  color: var(--ink-soft);
+  letter-spacing: 0.2em;
+}
+.j-secline::after {
+  background: var(--line);
+}
+
+.j-entries {
+  gap: 0;
+}
+.j-entry {
+  padding: 30px 0 34px;
+  border-bottom: 1px solid var(--line);
+}
+.j-entry:first-child {
+  padding-top: 4px;
+}
+
+.j-meta {
+  gap: 12px;
+}
+.j-day {
+  color: var(--ink);
+  font-weight: 600;
+}
+.j-badge {
+  background: transparent;
+  color: var(--acc);
+  padding: 0;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.j-date {
+  color: var(--ink-soft);
+}
+.j-h {
+  font-weight: 600;
+  font-size: clamp(19px, 2.9vw, 23px);
+  letter-spacing: -0.01em;
+}
+.j-body {
+  font-size: 14.5px;
+  line-height: 1.85;
+}
+.j-body p {
+  max-width: 68ch;
+}
+.j-body h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.j-body a {
+  color: var(--acc);
+}
+.j-body blockquote {
+  border-left: 2px solid var(--acc);
+  padding-left: 14px;
+  color: var(--ink-soft);
+  background: transparent;
+}
+.j-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+.j-body ul li::before {
+  content: "— ";
+  color: var(--acc);
+}
+.j-body code {
+  background: rgba(22, 24, 28, 0.06);
+}
+.j-body figcaption {
+  color: var(--ink-soft);
+}
+
+.j-arch-h {
+  color: var(--ink-soft);
+  letter-spacing: 0.2em;
+}
+.j-arch-item {
+  border-bottom: 1px dotted var(--line);
+}
+.j-arch-d {
+  color: var(--ink-soft);
+}
+.j-arch-t {
+  font-weight: 500;
+}
+
+.j-back {
+  color: var(--acc);
+}
+
+.j-foot {
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.themebar {
+  background: rgba(244, 244, 242, 0.94);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  border-radius: 2px;
+}
+.themebar-pill {
+  border-radius: 2px;
+  font-family: "IBM Plex Mono", monospace;
+}
+.themebar-pill:hover {
+  border-color: var(--ink-soft);
+}
+.themebar-pill[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}

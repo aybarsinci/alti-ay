@@ -1,0 +1,208 @@
+[
+  {
+    "slug": "2026-09-02-sacimi-kendim-kestim",
+    "title": "Saçımı kendim kestim",
+    "date": "2026-09-02",
+    "enerji": 5,
+    "kilo": 71.2,
+    "rutin": [
+      "ilac",
+      "ates",
+      "sivi",
+      "ogun",
+      "yuruyus"
+    ],
+    "kitap": "'Dune', s.345",
+    "foto": null,
+    "video": null,
+    "videoSure": "1:12"
+  },
+  {
+    "slug": "2026-08-31-kotu-gunler",
+    "title": "Kötü günler",
+    "date": "2026-08-31",
+    "enerji": 2,
+    "kilo": 71.3,
+    "rutin": [
+      "ilac",
+      "ates"
+    ],
+    "kitap": "'Dune', s.130",
+    "foto": null,
+    "video": null,
+    "videoSure": null
+  },
+  {
+    "slug": "2026-08-29-i-kinci-kur",
+    "title": "İkinci kür",
+    "date": "2026-08-29",
+    "enerji": 3,
+    "kilo": 71.5,
+    "rutin": [
+      "ilac",
+      "ates",
+      "sivi"
+    ],
+    "kitap": "'Dune', s.130",
+    "foto": null,
+    "video": null,
+    "videoSure": "1:12"
+  },
+  {
+    "slug": "2026-08-28-i-kinci-kurden-onceki-son-iyi-gun",
+    "title": "İkinci kürden önceki son iyi gün",
+    "date": "2026-08-28",
+    "enerji": 7,
+    "kilo": 71.3,
+    "rutin": [
+      "yuruyus",
+      "ogun",
+      "ilac",
+      "ates",
+      "sivi"
+    ],
+    "kitap": "'Dune', s.120",
+    "foto": null,
+    "video": null,
+    "videoSure": "1:12"
+  },
+  {
+    "slug": "2026-08-26-yedi-yuz-metre",
+    "title": "Yedi yüz metre",
+    "date": "2026-08-26",
+    "enerji": 7,
+    "kilo": 71.4,
+    "rutin": [
+      "yuruyus",
+      "ogun",
+      "ilac",
+      "ates",
+      "sivi"
+    ],
+    "kitap": "'Dune', s.60",
+    "foto": null,
+    "video": null,
+    "videoSure": "1:12"
+  },
+  {
+    "slug": "2026-08-23-1984-bitti",
+    "title": "'1984' bitti",
+    "date": "2026-08-23",
+    "enerji": 6,
+    "kilo": 71.5,
+    "rutin": [
+      "ilac",
+      "ates",
+      "sivi",
+      "ogun",
+      "yuruyus"
+    ],
+    "kitap": "'1984' bitti",
+    "foto": null,
+    "video": null,
+    "videoSure": "1:12"
+  },
+  {
+    "slug": "2026-08-20-her-sey-madeni-para-tadinda",
+    "title": "Her şey madeni para tadında",
+    "date": "2026-08-20",
+    "enerji": 5,
+    "kilo": 71.6,
+    "rutin": [
+      "ilac",
+      "ates",
+      "sivi",
+      "ogun",
+      "yuruyus"
+    ],
+    "kitap": "'1984', s.240",
+    "foto": null,
+    "video": null,
+    "videoSure": null
+  },
+  {
+    "slug": "2026-08-17-sayilar-iyi",
+    "title": "Sayılar iyi",
+    "date": "2026-08-17",
+    "enerji": 6,
+    "kilo": 71.8,
+    "rutin": [
+      "ilac",
+      "ates",
+      "sivi",
+      "ogun",
+      "yuruyus"
+    ],
+    "kitap": "'1984', s.190",
+    "foto": null,
+    "video": null,
+    "videoSure": null
+  },
+  {
+    "slug": "2026-08-15-balkon",
+    "title": "Balkon",
+    "date": "2026-08-15",
+    "enerji": 5,
+    "kilo": 72.0,
+    "rutin": [
+      "ilac",
+      "ates",
+      "sivi",
+      "ogun",
+      "yuruyus"
+    ],
+    "kitap": "'1984', s.140",
+    "foto": null,
+    "video": null,
+    "videoSure": null
+  },
+  {
+    "slug": "2026-08-12-toparlanma-basliyor",
+    "title": "Toparlanma başlıyor",
+    "date": "2026-08-12",
+    "enerji": 4,
+    "kilo": 72.2,
+    "rutin": [
+      "ilac",
+      "ates",
+      "sivi",
+      "ogun"
+    ],
+    "kitap": "'1984', s.98",
+    "foto": null,
+    "video": null,
+    "videoSure": null
+  },
+  {
+    "slug": "2026-08-10-i-kinci-gun",
+    "title": "İkinci gün",
+    "date": "2026-08-10",
+    "enerji": 2,
+    "kilo": 72.6,
+    "rutin": [
+      "ilac",
+      "ates"
+    ],
+    "kitap": "'1984', s.55",
+    "foto": null,
+    "video": null,
+    "videoSure": null
+  },
+  {
+    "slug": "2026-08-08-i-lk-kur",
+    "title": "İlk kür",
+    "date": "2026-08-08",
+    "enerji": 4,
+    "kilo": 73.0,
+    "rutin": [
+      "ilac",
+      "ates",
+      "sivi",
+      "ogun"
+    ],
+    "kitap": "'1984', s.42",
+    "foto": null,
+    "video": null,
+    "videoSure": null
+  }
+]

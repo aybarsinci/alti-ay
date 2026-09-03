@@ -1,0 +1,202 @@
+/* ============================================================
+   SAKİN — yalın, ferah, adaçayı yeşili
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #fbfcfb;
+  --surf: #ffffff;
+  --ink: #17211e;
+  --ink-body: #2c3a36;
+  --ink-soft: #66746f;
+  --acc: #3f7a6b;
+  --acc-soft: #e4efeb;
+  --line: #e0e6e3;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Manrope, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.skip {
+  background: var(--acc);
+  color: #fff;
+}
+
+.j-eyebrow {
+  color: var(--acc);
+  font-weight: 800;
+}
+.j-title {
+  font-weight: 800;
+  font-size: clamp(34px, 6.4vw, 50px);
+  letter-spacing: -0.03em;
+}
+.j-sub {
+  color: var(--ink-soft);
+  font-size: 16.5px;
+}
+
+.j-status {
+  gap: 0;
+  background: var(--surf);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.j-stat {
+  padding: 16px 18px;
+  border-right: 1px solid var(--line);
+}
+.j-stat:last-child {
+  border-right: 0;
+}
+.j-stat-l {
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.j-stat-v {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.j-stat-v small {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.j-cycles {
+  gap: 5px;
+}
+.j-cyc {
+  background: var(--surf);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.j-cyc.is-done {
+  background: var(--acc-soft);
+  border-color: transparent;
+}
+.j-cyc.is-done .j-cyc-n {
+  color: var(--acc);
+}
+.j-cyc.is-now {
+  background: var(--acc);
+  border-color: var(--acc);
+}
+.j-cyc.is-now .j-cyc-n,
+.j-cyc.is-now .j-cyc-d {
+  color: #fff;
+}
+.j-cyc-n {
+  color: var(--ink);
+}
+.j-cyc-d {
+  color: var(--ink-soft);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.j-secline {
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.j-secline::after {
+  background: var(--line);
+}
+
+.j-entries {
+  gap: 14px;
+}
+.j-entry {
+  background: var(--surf);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 26px 28px;
+}
+.j-day {
+  color: var(--acc);
+  font-weight: 800;
+}
+.j-badge {
+  background: var(--acc-soft);
+  color: var(--acc);
+  border-radius: 5px;
+}
+.j-date {
+  color: var(--ink-soft);
+  font-family: "JetBrains Mono", monospace;
+}
+.j-h {
+  font-weight: 800;
+  font-size: clamp(21px, 3.2vw, 26px);
+  letter-spacing: -0.02em;
+}
+.j-body {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--ink-body);
+}
+.j-body h3 {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.j-body a {
+  color: var(--acc);
+}
+.j-body blockquote {
+  background: var(--acc-soft);
+  border-radius: 9px;
+  color: #2f5a4f;
+}
+.j-body code {
+  font-family: "JetBrains Mono", monospace;
+  background: var(--acc-soft);
+  border-radius: 4px;
+}
+.j-body figure img {
+  border-radius: 10px;
+}
+.j-body figcaption {
+  color: var(--ink-soft);
+}
+
+.j-arch-h {
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.j-arch-item {
+  border-bottom: 1px solid var(--line);
+}
+.j-arch-d {
+  color: var(--ink-soft);
+  font-family: "JetBrains Mono", monospace;
+}
+.j-arch-t {
+  color: var(--ink);
+}
+
+.j-back {
+  color: var(--acc);
+  font-weight: 700;
+}
+
+.j-foot {
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.themebar {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+.themebar-pill:hover {
+  border-color: var(--acc);
+}
+.themebar-pill[aria-pressed="true"] {
+  background: var(--acc);
+  color: #fff;
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Altı Ay</title>
+    <meta name="description" content="Altı aylık tedavi sürecinin gün gün kaydı." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Altı Ay" />
+    <meta property="og:description" content="Altı aylık tedavi sürecinin gün gün kaydı." />
+    <meta property="og:locale" content="tr_TR" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2302100a'/><path d='M9 8h11a3 3 0 0 1 3 3v13H12a3 3 0 0 1-3-3V8Z' fill='none' stroke='%232bff88' stroke-width='2' stroke-linejoin='round'/><path d='M9 8v13a3 3 0 0 0 3 3' fill='none' stroke='%23eaff6b' stroke-width='2'/></svg>"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" id="theme-css" href="themes/terminal.css" />
+  </head>
+  <body>
+    <a class="skip" href="#gunluk">İçeriğe geç</a>
+
+    <div class="page">
+      <header class="j-head">
+        <div class="j-head-l">
+          <p class="j-eyebrow" id="site-eyebrow"></p>
+          <h1 class="j-title" id="site-title"></h1>
+        </div>
+        <div class="j-live"><span class="j-live-dot"></span><span id="live-text">—</span></div>
+      </header>
+      <p class="j-sub" id="site-sub"></p>
+
+      <p class="sec">[ ÖZET ]</p>
+      <div class="j-status" id="status"></div>
+
+      <div class="j-grid">
+        <div class="panel panel-chart">
+          <p class="sec">[ KİLO &amp; ENERJİ ]</p>
+          <p class="prog-line" id="prog-line"></p>
+          <div class="ch-wrap" id="chart"></div>
+          <div class="ch-legend" id="chart-legend"></div>
+        </div>
+
+        <div class="j-side">
+          <div class="panel">
+            <p class="sec">[ GÜNLÜK CHECKLIST ]</p>
+            <div id="checklist"></div>
+          </div>
+          <div class="panel">
+            <p class="sec">[ KİTAPLAR &amp; KURSLAR ]</p>
+            <div id="lists"></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sec">[ KÜR TAKVİMİ ]</p>
+      <div class="j-cycles" id="cycles"></div>
+
+      <p class="sec" id="gunluk"><span id="secline-label">[ GÜNLÜK &amp; MEDYA ARŞİVİ ]</span></p>
+      <main class="j-entries" id="entries">
+        <p class="j-loading">Yükleniyor…</p>
+      </main>
+
+      <nav class="j-archive" id="archive" hidden></nav>
+
+      <p class="j-prompt" id="prompt"></p>
+      <footer class="j-foot" id="foot"></footer>
+    </div>
+
+    <div class="themebar" id="themebar" hidden>
+      <span class="themebar-l">Tema</span>
+      <div class="themebar-pills" id="theme-pills"></div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

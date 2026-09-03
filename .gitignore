@@ -1,0 +1,5 @@
+.DS_Store
+dist/
+node_modules/
+# BingX pano isi park halde; herkese acik depoda durmasina gerek yok
+ileride-bingx/

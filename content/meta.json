@@ -1,0 +1,91 @@
+{
+  "title": "Altı Ay",
+  "eyebrow": "// LENFOMA ~ 6 AYLIK MÜCADELE PANOSU",
+  "subtitle": "Ağustos 2026'da başladı. Altı kür, yirmi bir günde bir. Buraya her gün değil, yazacak bir şey olduğu her gün yazıyorum.",
+  "footer": "Bu sayfadaki her yazı düz metin dosyası olarak saklanıyor; tamamı indirilebilir.",
+  "treatment": {
+    "startDate": "2026-08-08",
+    "totalDays": 180,
+    "cycleLabel": "Kür",
+    "cycles": [
+      {
+        "n": 1,
+        "date": "2026-08-08"
+      },
+      {
+        "n": 2,
+        "date": "2026-08-29"
+      },
+      {
+        "n": 3,
+        "date": "2026-09-19"
+      },
+      {
+        "n": 4,
+        "date": "2026-10-10"
+      },
+      {
+        "n": 5,
+        "date": "2026-10-31"
+      },
+      {
+        "n": 6,
+        "date": "2026-11-21"
+      }
+    ]
+  },
+  "routine": [
+    {
+      "id": "yuruyus",
+      "label": "Yürüyüş (10-15 dk)"
+    },
+    {
+      "id": "ogun",
+      "label": "Öğün tamamlama"
+    },
+    {
+      "id": "ilac",
+      "label": "İlaç & takviye rutini"
+    },
+    {
+      "id": "ates",
+      "label": "Ateş ölçümü"
+    },
+    {
+      "id": "sivi",
+      "label": "Sıvı desteği (2,5-3 L)"
+    }
+  ],
+  "milestones": [
+    "'1984' bitti, 'Dune' başladı",
+    "İlk kürün ay dönümünü arkadaşlarla kutladık",
+    "İki haftadır her gün en az 500 metre yürüdüm"
+  ],
+  "books": [
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "done": "2026-08-23"
+    },
+    {
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "done": null,
+      "page": 345,
+      "pages": 712
+    }
+  ],
+  "courses": [
+    {
+      "title": "Python ile Veri Analizi",
+      "source": "Udemy",
+      "done": "2026-08-19"
+    },
+    {
+      "title": "Temel Fotoğrafçılık",
+      "source": "YouTube",
+      "done": null,
+      "progress": 40
+    }
+  ]
+}
