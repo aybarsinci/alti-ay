@@ -13,6 +13,7 @@ import {
 import { treatmentDay, cycleAt, nextCycle, cycleState } from "./treatment.js";
 import { loadEntry } from "./entries.js";
 import { progressChart } from "./chart.js";
+import { downloadArchive } from "./arsiv.js";
 
 export function renderHead(meta, list) {
   dom.eyebrow.textContent = meta.eyebrow || "";
@@ -279,6 +280,28 @@ export function renderFoot(meta, list) {
   dom.foot.innerHTML =
     `<p>${escapeHtml(meta.footer || "")}</p>` +
     `<p>${escapeHtml(meta.title || "")} · ${list.length} gün kayıtlı · ${new Date().getFullYear()}</p>`;
+}
+
+/**
+ * "Günlüğün tamamını indir" düğmesini bağlar. Arşivin kendisi js/arsiv.js'te;
+ * burada sadece düğmenin durumu ve ilerleme metni var.
+ */
+export function renderDownload(meta, list) {
+  const say = (text) => {
+    dom.downloadMsg.textContent = text;
+  };
+
+  dom.downloadBtn.addEventListener("click", async () => {
+    dom.downloadBtn.disabled = true;
+    try {
+      await downloadArchive(meta, list, say);
+    } catch (err) {
+      console.error(err);
+      say("İndirilemedi. Sayfayı yenileyip tekrar dene.");
+    } finally {
+      dom.downloadBtn.disabled = false;
+    }
+  });
 }
 
 export function renderError(message) {

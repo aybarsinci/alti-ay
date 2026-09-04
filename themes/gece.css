@@ -189,6 +189,15 @@ body {
   color: var(--ink-soft);
 }
 
+/* arşivi indirme satırı */
+.j-dl {
+  color: var(--ink-soft);
+}
+.j-dl-btn:hover,
+.j-dl-btn:focus-visible {
+  color: var(--acc);
+}
+
 .themebar {
   background: rgba(33, 36, 43, 0.94);
   border: 1px solid var(--line);

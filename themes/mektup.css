@@ -202,6 +202,15 @@ body {
   font-size: 12px;
 }
 
+/* arşivi indirme satırı */
+.j-dl {
+  color: var(--ink-soft);
+}
+.j-dl-btn:hover,
+.j-dl-btn:focus-visible {
+  color: var(--acc);
+}
+
 .themebar {
   background: rgba(244, 244, 242, 0.94);
   border: 1px solid var(--line);

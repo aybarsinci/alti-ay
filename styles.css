@@ -483,6 +483,31 @@ video {
 }
 
 /* ---------- Arşiv / gezinme ---------- */
+/* Arşivi indirme satırı. Renk temalardan gelir; burada yalnızca yerleşim
+   ve <button>'ı bağlantı gibi göstermek için gereken sıfırlama var. */
+.j-dl {
+  margin: 10px 0 0;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+}
+.j-dl-btn {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.j-dl-btn[disabled] {
+  cursor: default;
+  text-decoration: none;
+}
+
 .j-archive {
   margin: 26px 0 0;
 }

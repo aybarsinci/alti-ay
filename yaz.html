@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Bugünü ekle</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" id="theme-css" href="themes/terminal.css" />
+    <link rel="stylesheet" href="yaz.css" />
+  </head>
+  <body>
+    <div class="page page-yaz">
+      <!-- anahtar ekranı -->
+      <section class="w-gate" id="gate">
+        <p class="j-eyebrow">// GİRİŞ</p>
+        <h1 class="j-title">Bugünü ekle</h1>
+        <label class="w-l" for="pw">Yazma anahtarı</label>
+        <input class="w-in" type="password" id="pw" autocomplete="current-password" />
+        <p class="w-hint">Bir kez yapıştırman yeterli; bu telefonda kalır.</p>
+        <button class="w-btn w-btn-p" id="gate-btn" type="button">Gir</button>
+        <p class="w-msg" id="gate-msg"></p>
+      </section>
+
+      <!-- form -->
+      <section class="w-form" id="form" hidden>
+        <header class="j-head">
+          <div>
+            <p class="j-eyebrow">// BUGÜNÜ EKLE</p>
+            <h1 class="j-title" id="w-daytitle">Bugün</h1>
+          </div>
+          <div class="w-head-r">
+            <button class="w-link" id="relogin" type="button">Anahtarı değiştir</button>
+            <a class="w-link" href="./">Günlüğe dön</a>
+          </div>
+        </header>
+
+        <p class="w-draft" id="draft-note" hidden>Kaydedilmemiş taslak geri yüklendi.</p>
+
+        <div class="w-row">
+          <div class="w-f">
+            <label class="w-l" for="f-date">Tarih</label>
+            <input class="w-in" type="date" id="f-date" />
+          </div>
+          <div class="w-f">
+            <label class="w-l" for="f-kilo">Kilo (kg)</label>
+            <input class="w-in" type="text" id="f-kilo" inputmode="decimal" autocomplete="off" placeholder="71,2" />
+          </div>
+        </div>
+
+        <div class="w-f">
+          <label class="w-l">Enerji — bugün kendini nasıl hissediyorsun?</label>
+          <div class="w-en" id="f-enerji"></div>
+        </div>
+
+        <div class="w-f">
+          <label class="w-l">Günlük checklist</label>
+          <div class="w-ck" id="f-rutin"></div>
+        </div>
+
+        <div class="w-f">
+          <label class="w-l" for="f-kitap">Kitap / kurs (isteğe bağlı)</label>
+          <input class="w-in" type="text" id="f-kitap" placeholder="'Dune', s.345" />
+        </div>
+
+        <div class="w-row">
+          <div class="w-f">
+            <label class="w-l" for="f-foto">Bugünün fotoğrafı</label>
+            <input class="w-file" type="file" id="f-foto" accept="image/*" />
+            <p class="w-hint" id="foto-hint">Seçilmedi</p>
+          </div>
+          <div class="w-f">
+            <label class="w-l" for="f-video">Bugünün videosu (1-2 dk)</label>
+            <input class="w-file" type="file" id="f-video" accept="video/*" />
+            <p class="w-hint" id="video-hint">Seçilmedi</p>
+          </div>
+        </div>
+
+        <div class="w-f">
+          <label class="w-l" for="f-baslik">Başlık</label>
+          <input class="w-in" type="text" id="f-baslik" placeholder="Bugüne bir isim ver" />
+        </div>
+
+        <div class="w-f">
+          <label class="w-l" for="f-metin">Bugün</label>
+          <textarea class="w-ta" id="f-metin" rows="9" placeholder="Yazacak halin yoksa boş bırak — yukarıdakiler de yeter."></textarea>
+        </div>
+
+        <div class="w-actions">
+          <button class="w-btn w-btn-p" id="save" type="button">Kaydet</button>
+          <button class="w-btn" id="preview" type="button">Ne kaydedilecek?</button>
+        </div>
+        <p class="w-msg" id="msg"></p>
+        <pre class="w-pre" id="pre" hidden></pre>
+      </section>
+    </div>
+
+    <script type="module" src="js/yaz.js"></script>
+  </body>
+</html>

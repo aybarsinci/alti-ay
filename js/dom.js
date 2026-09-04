@@ -17,6 +17,8 @@ export const dom = {
   archive: document.getElementById("archive"),
   prompt: document.getElementById("prompt"),
   foot: document.getElementById("foot"),
+  downloadBtn: document.getElementById("download-all"),
+  downloadMsg: document.getElementById("download-msg"),
   themebar: document.getElementById("themebar"),
   themePills: document.getElementById("theme-pills"),
   themeCss: document.getElementById("theme-css"),

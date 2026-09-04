@@ -75,16 +75,48 @@ yüklemeden önce küçültmek depoyu şişmekten kurtarır.
 Kür sayısı ve aralığı serbesttir; şerit listeye göre çizilir.
 Başlık, alt başlık ve altbilgi de aynı dosyada.
 
+## Günlüğe telefondan yazma (`yaz.html`)
+
+`https://<site>/yaz.html` bir giriş ekranıyla açılır. Yazılan gün doğrudan bu
+depoya işlenir: `content/entries/<slug>.md`, `content/index.json` ve varsa
+fotoğraf **tek commit'te** gider, site birkaç dakika içinde kendini günceller.
+
+Kurulum bir kereliktir:
+
+1. GitHub → Settings → Developer settings → **Personal access tokens** →
+   *Fine-grained tokens* → **Generate new token**
+2. **Repository access:** *Only select repositories* → bu depo
+3. **Permissions → Repository permissions → Contents: Read and write**
+   (başka hiçbir yetki gerekmiyor)
+4. Süreyi olabildiğince uzun seç ve takvime bir hatırlatma koy — süresi dolunca
+   kaydetme durur, ekranda "anahtar süresi dolmuş" yazar.
+5. Üretilen anahtarı telefonda `yaz.html`'e bir kez yapıştır. Tarayıcıda kalır;
+   her gün tekrar sorulmaz. Değiştirmek için sağ üstteki "Anahtarı değiştir".
+
+Anahtar kaynak kodda **durmaz**, sadece o telefonda durur. Neden araya sunucu
+koymadığımız `CLAUDE.md` içindeki "Yazma yolu" bölümünde.
+
+> **Video alanı şimdilik kapalı.** Video depolama (R2) bağlanana kadar açılmıyor;
+> gerekçesi `CLAUDE.md` → "Henüz yapılmadı".
+
+## Günlüğün tamamını indirme
+
+Ana sayfanın en altındaki **"Günlüğün tamamını indir"**, bütün yazıları ve
+fotoğrafları içine gömülmüş tek bir HTML dosyası üretir. O dosya hiçbir şeye
+bağlı değildir: internet olmadan açılır, kopyalanır, yazdırılabilir. Site bir
+gün kapanırsa aileye kalacak şey budur.
+
 ## Temalar
 
-Beş tema var: **defter**, **sakin**, **yolculuk**, **mektup**, **gece**.
+Altı tema var: **terminal** (varsayılan), **defter**, **sakin**, **yolculuk**,
+**mektup**, **gece**.
 Sağ alttaki seçiciden değiştirilir, seçim tarayıcıda saklanır.
 `?tema=gece` ile doğrudan da açılabilir.
 
 Tema kesinleştiğinde `js/config.js` içinde:
 
 ```js
-export const DEFAULT_THEME = "gece";      // seçilen tema
+export const DEFAULT_THEME = "terminal";  // seçilen tema
 export const SHOW_THEME_PICKER = false;   // seçiciyi gizle
 ```
 
@@ -92,21 +124,25 @@ Yeni tema eklemek: `themes/<ad>.css` dosyası yaz (mevcut birini kopyalayarak ba
 ve `js/config.js` içindeki `THEMES` listesine bir satır ekle. Temalar sadece renk ve
 yazı tipi verir; yerleşim `styles.css` içindedir ve ortaktır.
 
-## Yayına alma (Cloudflare Pages)
+## Yayına alma
 
-```sh
-npx wrangler pages deploy . --project-name=<proje-adi> --branch=main
-```
+Site **GitHub Pages**'te: <https://aybarsinci.github.io/alti-ay/>. `main`'e
+gönderilen her şey birkaç dakika içinde yayına girer; derleme adımı yok.
 
-Derleme adımı olmadığı için klasörün tamamı doğrudan yayınlanır.
+> `.nojekyll` dosyasını silme. Olmadığında GitHub Pages araya Jekyll sokup
+> `.md` dosyalarını HTML'e çeviriyor ve yazılar 404 veriyor.
+
+Cloudflare Pages denendi ve bırakıldı: `pages.dev` Türkiye'de operatör
+seviyesinde filtreleniyor, site açılmıyordu.
 
 ## Sırada ne var
 
-- [ ] **Yazma sayfası** — şifreli, telefondan tek elle yazılabilen bir arayüz;
-      kaydedince markdown dosyasını kendisi oluştursun (Cloudflare Worker + GitHub API).
-- [ ] Fotoğraf yükleme (yüklerken otomatik küçültme).
+- [x] **Yazma sayfası** — telefondan tek elle doldurulur, kaydedince markdown
+      dosyasını kendisi oluşturur (`yaz.html`).
+- [x] Fotoğraf yükleme (yüklerken otomatik küçültme).
+- [x] Tek dosya hâlinde indirme ("günlüğün tamamını indir").
+- [ ] **Video** — depolama çözülmeden alan açılmıyor (R2, kart gerekiyor).
 - [ ] Yorum / destek mesajları — şimdilik yok, sonra eklenecek.
-- [ ] Tek dosya hâlinde indirme ("günlüğün tamamını yazdır/indir").
 
 ## Dosya düzeni
 
@@ -114,16 +150,21 @@ Derleme adımı olmadığı için klasörün tamamı doğrudan yayınlanır.
 index.html          tek sayfa, DOM iskeleti
 styles.css          ortak yerleşim (renk/yazı tipi YOK)
 themes/*.css        beş tema — sadece renk, yazı tipi, süsleme
+yaz.html          günlük giriş ekranı (yaz.css)
 js/
-  config.js         ayarlar (tema listesi, varsayılanlar)
+  config.js         ayarlar (tema listesi, varsayılanlar, depo bilgisi)
   dom.js            element referansları
-  utils.js          tarih, kaçış
+  utils.js          tarih, kaçış, sayı biçimleri
   treatment.js      kür / tedavi günü hesabı
   markdown.js       frontmatter + markdown çevirici
   entries.js        içerik yükleme + önbellek
+  chart.js          kilo & enerji grafiği
   render.js         sayfayı çizen tek yer
+  arsiv.js          günlüğün tamamını tek dosyaya çıkarır
   theme.js          tema seçici
   main.js           giriş noktası
+  yaz.js            giriş ekranının mantığı
+  github.js         depoya yazma (tek commit)
 content/
   meta.json         başlık, alt başlık, tedavi takvimi
   index.json        yazı listesi (en yeni önce)

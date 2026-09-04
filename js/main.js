@@ -11,6 +11,7 @@ import {
   renderList,
   renderSingle,
   renderFoot,
+  renderDownload,
   renderError,
 } from "./render.js";
 import { initTheme } from "./theme.js";
@@ -36,6 +37,7 @@ async function start() {
   renderLists(meta);
   renderCycles(meta);
   renderFoot(meta, list);
+  renderDownload(meta, list);
 
   const slug = new URLSearchParams(location.search).get("yazi");
   if (slug) {
