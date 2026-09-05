@@ -93,6 +93,10 @@ Kurulum bir kereliktir:
 5. Üretilen anahtarı telefonda `yaz.html`'e bir kez yapıştır. Tarayıcıda kalır;
    her gün tekrar sorulmaz. Değiştirmek için sağ üstteki "Anahtarı değiştir".
 
+> Yeni bir anahtarı başkasına vermeden önce kendi anahtarınla bir kez gerçekten
+> kaydet. Kaydetme yolu canlıda ilk kez denendiğinde bir aksilik çıkarsa, bunu
+> tedavi günündeki biri değil sen görmelisin.
+
 Anahtar kaynak kodda **durmaz**, sadece o telefonda durur. Neden araya sunucu
 koymadığımız `CLAUDE.md` içindeki "Yazma yolu" bölümünde.
 

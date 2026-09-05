@@ -5,7 +5,7 @@ Yeni girdiler en üste.
 
 ---
 
-## 2026-09-04 — Yazma yolu ve arşiv
+## 2026-09-04/05 — Yazma yolu ve arşiv
 
 Alan adı hâlâ yok. Aybars "domaini arkadaşa aldıracağım, onun dışındakileri
 yapalım" dedi, o yüzden bu oturum alan adına bağlı olmayan işlere gitti.
@@ -66,13 +66,43 @@ yazıyor). Seçtirip kaydetmemek, kötü bir günde kaydettiğini sanmasından b
 180 gün × 1-2 dk ≈ 5-6 GB; git deposu kaldırmaz. R2 kart istiyor, o da
 arkadaşın iyi bir gününü bekliyor.
 
+### Arkadaşa gidecek kurulum notu (yazıldı, gönderilmedi)
+
+Oturumun sonunda Aybars "ona bir yapılacaklar notu gönderelim" dedi. Önce
+siteyi anlatan bir metin yazıldı, Aybars *"direk site falan laga luga
+yapacağına sadece sitesi için hangi şeyleri kurması lazım detaylı anlat"*
+diyerek reddetti. **Ders: arkadaşa giden metinlerde tanıtım yok, sadece
+yapılacak iş.** Nihai not şu adımlardan oluşuyor:
+
+1. `dash.cloudflare.com/sign-up` — ücretsiz plan.
+2. **İki adımlı doğrulama** (My Profile → Authentication). Alan adı bu hesaba
+   bağlı olacak; hesap giderse adres de gider.
+3. Kart ekle (Manage Account → Billing → Payment Info).
+4. Alan adını al (Domain Registration → Register Domain). Cloudflare maliyetine
+   satıyor, `.com` ~10-11 $/yıl, WHOIS gizliliği ücretsiz ve otomatik.
+5. **Aybars'ı `aybarsinci00@gmail.com` ile Super Administrator olarak ekle**
+   (Manage Account → Members → Invite Member). Bundan sonra arkadaşın paneli
+   açması gerekmiyor.
+6. R2'yi Aybars açacak; arkadaştan sadece 3. adımdaki kartın durması isteniyor.
+
+Kartsız alternatif de nota kondu: alan adı başka bir kayıt şirketinden alınır,
+Cloudflare sadece ücretsiz DNS için kullanılır — o zaman video depolaması düşer.
+
+Notta ayrıca gerçek veriler istendi: isim, başlangıç tarihi, kür tarihleri,
+güncel kilo. **Arkadaşın adı hâlâ bilinmiyor** — taslak sitenin adresinden
+(`kaan.fightsuntarsi.com`) tahmin yürütmek bilerek yapılmadı, selamlamayı
+Aybars dolduracak. Gönderim kanalı da belirlenmedi (metin Aybars'ta duruyor).
+
 ### Hâlâ açık
 
-- Alan adı seçilmedi; Cloudflare hesabı açılmadı.
-- **Arkadaştan gerçek veriler alınmadı**: isim, başlangıç tarihi, kür takvimi,
-  başlangıç kilosu. İçerik hâlâ 12 günlük uydurma örnek.
+- **`14ecd84` push edilmedi.** Bu oturumun tamamı yerelde duruyor; `main`
+  origin'in bir commit önünde. Site hâlâ eski hâlini yayınlıyor.
 - **Yazma yolu canlıda hiç denenmedi** — gerçek bir PAT gerekiyor. Doğrulama,
   önizleme, hata mesajları ve arşiv yerelde çalışıyor; asıl commit değil.
+  Arkadaşa anahtar üretmeden önce Aybars kendi anahtarıyla bir kez denemeli.
+- Kurulum notu gönderilmedi; alan adı ve Cloudflare hesabı yok.
+- **Arkadaştan gerçek veriler alınmadı**: isim, başlangıç tarihi, kür takvimi,
+  başlangıç kilosu. İçerik hâlâ 12 günlük uydurma örnek.
 - Cloudflare Pages'teki eski özel alan adı bağlantısı temizlenmedi.
 - Video depolama, yorumlar.
 
